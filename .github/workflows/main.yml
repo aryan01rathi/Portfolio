@@ -1,0 +1,31 @@
+name: Web Build
+
+on:
+  push:
+    branches:
+      - main  # Change this to your branch name if it's not 'main'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Build Website
+      run: |
+        # Build your HTML, CSS, and JS files here
+        # Replace `path/to/your/index.html` with the actual path to your HTML file
+        # Replace `path/to/your/style.css` with the actual path to your CSS file
+        # Replace `path/to/your/script.js` with the actual path to your JS file
+        
+        # Example build commands
+        echo "Building HTML..."
+        cp dist/index.html
+
+        echo "Building CSS..."
+        cp dist/style.css
+
+        echo "Building JavaScript..."
+        cp dist/script.js
